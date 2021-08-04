@@ -1,0 +1,80 @@
+[debug] [2021-08-04T01:05:23.809Z] ----------------------------------------------------------------------
+[debug] [2021-08-04T01:05:23.811Z] Command:       /usr/local/bin/firebase /Users/svetlanagulotta/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase deploy
+[debug] [2021-08-04T01:05:23.811Z] CLI Version:   9.16.0
+[debug] [2021-08-04T01:05:23.811Z] Platform:      darwin
+[debug] [2021-08-04T01:05:23.812Z] Node Version:  v12.18.1
+[debug] [2021-08-04T01:05:23.820Z] Time:          Tue Aug 03 2021 18:05:23 GMT-0700 (Pacific Daylight Time)
+[debug] [2021-08-04T01:05:23.820Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-08-04T01:05:23.870Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-08-04T01:05:23.871Z] > authorizing via signed-in user (lanagulotta@gmail.com)
+[debug] [2021-08-04T01:05:23.871Z] [iam] checking project vediarts-590eb for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-08-04T01:05:23.876Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/vediarts-590eb:testIamPermissions  
+ {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2021-08-04T01:05:24.172Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 04 Aug 2021 01:05:24 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=175","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-08-04T01:05:24.174Z] >>> HTTP REQUEST POST https://iam.googleapis.com/v1/projects/vediarts-590eb/serviceAccounts/vediarts-590eb@appspot.gserviceaccount.com:testIamPermissions  
+ {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2021-08-04T01:05:24.382Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 04 Aug 2021 01:05:25 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-08-04T01:05:24.384Z] > refreshing access token with scopes: []
+[debug] [2021-08-04T01:05:24.384Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-08-04T01:05:24.521Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","date":"Wed, 04 Aug 2021 01:05:25 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-08-04T01:05:24.552Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/vediarts-590eb [none]
+[debug] [2021-08-04T01:05:24.741Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/vediarts-590eb 200
+[debug] [2021-08-04T01:05:24.741Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/vediarts-590eb {"projectId":"vediarts-590eb","projectNumber":"28460615978","displayName":"vediarts","name":"projects/vediarts-590eb","resources":{"hostingSite":"vediarts-590eb","realtimeDatabaseInstance":"vediarts-590eb-default-rtdb","storageBucket":"vediarts-590eb.appspot.com","locationId":"us-central"},"state":"ACTIVE"}
+[info] 
+[info] === Deploying to 'vediarts-590eb'...
+[info] 
+[info] i  deploying firestore, functions, hosting 
+[debug] [2021-08-04T01:05:24.837Z] TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string. Received undefined
+    at validateString (internal/validators.js:120:11)
+    at Object.join (path.js:1039:7)
+    at Config.path (/Users/svetlanagulotta/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/config.js:115:45)
+    at getChildEnvironment (/Users/svetlanagulotta/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/deploy/lifecycleHooks.js:50:49)
+    at runTargetCommands (/Users/svetlanagulotta/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/deploy/lifecycleHooks.js:71:14)
+    at /Users/svetlanagulotta/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/deploy/lifecycleHooks.js:122:24
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2021-08-04T01:06:23.746Z] ----------------------------------------------------------------------
+[debug] [2021-08-04T01:06:23.748Z] Command:       /usr/local/bin/firebase /Users/svetlanagulotta/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase deploy
+[debug] [2021-08-04T01:06:23.748Z] CLI Version:   9.16.0
+[debug] [2021-08-04T01:06:23.748Z] Platform:      darwin
+[debug] [2021-08-04T01:06:23.748Z] Node Version:  v12.18.1
+[debug] [2021-08-04T01:06:23.750Z] Time:          Tue Aug 03 2021 18:06:23 GMT-0700 (Pacific Daylight Time)
+[debug] [2021-08-04T01:06:23.750Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-08-04T01:06:23.797Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-08-04T01:06:23.797Z] > authorizing via signed-in user (lanagulotta@gmail.com)
+[debug] [2021-08-04T01:06:23.797Z] [iam] checking project vediarts-590eb for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-08-04T01:06:23.799Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-08-04T01:06:23.800Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-08-04T01:06:23.926Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Wed, 04 Aug 2021 01:06:24 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-08-04T01:06:23.955Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/vediarts-590eb:testIamPermissions  
+ {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2021-08-04T01:06:24.194Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 04 Aug 2021 01:06:24 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=186","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-08-04T01:06:24.195Z] >>> HTTP REQUEST POST https://iam.googleapis.com/v1/projects/vediarts-590eb/serviceAccounts/vediarts-590eb@appspot.gserviceaccount.com:testIamPermissions  
+ {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2021-08-04T01:06:24.377Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 04 Aug 2021 01:06:25 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-08-04T01:06:24.379Z] > refreshing access token with scopes: []
+[debug] [2021-08-04T01:06:24.379Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-08-04T01:06:24.491Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","date":"Wed, 04 Aug 2021 01:06:25 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-08-04T01:06:24.517Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/vediarts-590eb [none]
+[debug] [2021-08-04T01:06:24.686Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/vediarts-590eb 200
+[debug] [2021-08-04T01:06:24.686Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/vediarts-590eb {"projectId":"vediarts-590eb","projectNumber":"28460615978","displayName":"vediarts","name":"projects/vediarts-590eb","resources":{"hostingSite":"vediarts-590eb","realtimeDatabaseInstance":"vediarts-590eb-default-rtdb","storageBucket":"vediarts-590eb.appspot.com","locationId":"us-central"},"state":"ACTIVE"}
+[info] 
+[info] === Deploying to 'vediarts-590eb'...
+[info] 
+[info] i  deploying firestore, functions, hosting 
+[debug] [2021-08-04T01:06:24.769Z] TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string. Received undefined
+    at validateString (internal/validators.js:120:11)
+    at Object.join (path.js:1039:7)
+    at Config.path (/Users/svetlanagulotta/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/config.js:115:45)
+    at getChildEnvironment (/Users/svetlanagulotta/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/deploy/lifecycleHooks.js:50:49)
+    at runTargetCommands (/Users/svetlanagulotta/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/deploy/lifecycleHooks.js:71:14)
+    at /Users/svetlanagulotta/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/deploy/lifecycleHooks.js:122:24
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+[error] 
+[error] Error: An unexpected error has occurred.
